@@ -1,0 +1,211 @@
+/* ==========================================================
+   style.css — une seule feuille de style pour les 3 pages
+   ========================================================== */
+
+/* 1. Variables : les couleurs et polices sont définies une fois ici,
+      puis réutilisées partout avec var(--nom). */
+:root {
+  --fond: #0b0b0b;
+  --texte: #ededed;
+  --gris: #8a8a8a;
+  --trait: #262626;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* 2. Base : réglages appliqués à toute la page. */
+* {
+  box-sizing: border-box;   /* la largeur d'un bloc inclut ses marges internes */
+}
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--texte);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gris);
+}
+
+a:hover {
+  border-bottom-color: var(--texte);
+}
+
+/* 3. Mise en page : une colonne centrée, pas trop large pour rester lisible. */
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;                  /* pousse le pied de page tout en bas */
+}
+
+/* 4. En-tête : le "chemin" façon dossier, à gauche, et le menu à droite. */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--gris);
+  margin-bottom: 90px;
+}
+
+header a {
+  color: var(--gris);
+  border: none;
+}
+
+header a:hover,
+header a.actif {
+  color: var(--texte);
+}
+
+nav a {
+  margin-left: 20px;
+}
+
+/* 5. Textes */
+h1 {
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.sous-titre {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--gris);
+  margin: 0 0 48px;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+.discret {
+  color: var(--gris);
+}
+
+/* 6. Page d'accueil : les deux grands liens vers les autres pages. */
+.choix {
+  margin-top: 56px;
+  border-top: 1px solid var(--trait);
+}
+
+.choix a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 22px 0;
+  border: none;
+  border-bottom: 1px solid var(--trait);
+  font-size: 24px;
+}
+
+.choix a span {
+  font-family: var(--mono);
+  font-size: 18px;
+  color: var(--gris);
+}
+
+.choix a:hover {
+  padding-left: 10px;       /* petit décalage au survol */
+}
+
+.choix a {
+  transition: padding-left 0.2s;
+}
+
+/* 7. Pages Compétences et Projets : une ligne = un libellé à gauche
+      et son contenu à droite (grille à 2 colonnes). */
+.ligne {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  border-top: 1px solid var(--trait);
+}
+
+.ligne:last-of-type {
+  border-bottom: 1px solid var(--trait);
+}
+
+.libelle {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--gris);
+  padding-top: 4px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.outils {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--gris);
+  margin-bottom: 14px;
+}
+
+.ligne ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.ligne li {
+  margin-bottom: 6px;
+}
+
+/* 8. Pied de page */
+footer {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--gris);
+}
+
+footer a {
+  color: var(--gris);
+  margin-left: 20px;
+}
+
+/* 9. Téléphone : sous 640 px de large, on passe tout sur une colonne. */
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  header { margin-bottom: 60px; }
+  h1 { font-size: 34px; }
+  .ligne {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .choix a { font-size: 20px; }
+  nav a { margin-left: 0; margin-right: 20px; }
+  footer a { margin-left: 0; margin-right: 20px; }
+}
+
+footer a.retour {
+  margin-left: 0;
+}
