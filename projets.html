@@ -19,7 +19,7 @@
 
     <main>
       <h1>Projets</h1>
-      <p class="sous-titre">Ce que j'ai construit jusqu'ici.</p>
+      <p class="sous-titre">Projets universitaires et personnels.</p>
 
       <!-- Projet 1 -->
       <section class="ligne">
@@ -28,15 +28,15 @@
           <h2>Analyse de données de santé</h2>
           <div class="outils">Python · pandas</div>
           <p>
-            Trois analyses sur les données d'activité physique de 12 participants,
-            environ 290 jours chacun :
+            Analyse et traitement de données d'activité physique issues de 12 participants,
+            sur environ 290 jours de données par participant.
           </p>
           <ul>
-            <li>classement des participants selon leur fréquence cardiaque moyenne ;</li>
-            <li>détection des anomalies, en comparant chaque jour à la moyenne propre à chaque participant plutôt qu'à un seuil fixe ;</li>
-            <li>mesure de la régularité de l'activité, en reliant les jours similaires dans un graphe puis en les regroupant par un parcours en largeur (BFS).</li>
+            <li>Classement des participants selon leur fréquence cardiaque moyenne.</li>
+            <li>Détection d'anomalies par comparaison des valeurs quotidiennes à la moyenne individuelle de chaque participant.</li>
+            <li>Mesure de la régularité de l'activité à partir d'un graphe reliant les journées aux caractéristiques similaires, avec parcours en largeur (BFS).</li>
+            <li>Justification des choix algorithmiques et analyse de leur complexité en temps et en mémoire.</li>
           </ul>
-          <p>Pour chaque analyse, j'ai justifié le choix de l'algorithme et calculé sa complexité.</p>
           <p><a href="https://github.com/William-Bassole/Health-Data-Analysis" target="_blank" rel="noopener">Voir le code sur GitHub</a></p>
         </div>
       </section>
@@ -48,14 +48,14 @@
           <h2>MP GYM — base de données d'une salle de sport</h2>
           <div class="outils">SQL · PostgreSQL · UML</div>
           <p>
-            Conception complète de la base de données d'une salle de sport, utilisée
-            par trois types d'utilisateurs : l'administrateur, les membres et les coachs.
+            Conception et implémentation d'une base de données relationnelle pour la gestion
+            d'une salle de sport, couvrant les besoins des administrateurs, membres et coachs.
           </p>
           <ul>
-            <li>analyse des besoins avec un diagramme des cas d'utilisation, puis un diagramme de classes ;</li>
-            <li>schéma relationnel de 8 tables (membres, abonnements, souscriptions, paiements, coachs, cours, séances, réservations), avec clés primaires, clés étrangères et contraintes d'intégrité ;</li>
-            <li>vérification que chaque table respecte la troisième forme normale, pour éviter les doublons et les incohérences ;</li>
-            <li>10 requêtes PostgreSQL qui répondent à des questions de gestion : séances complètes, taux de remplissage, chiffre d'affaires par mois, abonnements qui expirent dans les 30 jours.</li>
+            <li>Analyse des besoins à l'aide d'un diagramme de cas d'utilisation, puis d'un diagramme de classes.</li>
+            <li>Schéma relationnel de 8 tables, avec clés primaires, clés étrangères et contraintes d'intégrité.</li>
+            <li>Normalisation de chaque table en troisième forme normale, pour limiter redondances et incohérences.</li>
+            <li>10 requêtes PostgreSQL pour le suivi de l'activité : séances complètes, taux de remplissage, chiffre d'affaires mensuel, abonnements arrivant à expiration.</li>
           </ul>
           <p><a href="https://github.com/JahidAbdel/MP-Gym" target="_blank" rel="noopener">Voir le dépôt sur GitHub</a></p>
         </div>
@@ -65,14 +65,14 @@
       <section class="ligne">
         <div class="libelle">03</div>
         <div>
-          <h2>Ce site</h2>
+          <h2>Portfolio personnel</h2>
           <div class="outils">HTML · CSS</div>
           <p>
-            Trois pages écrites à la main, sans framework ni modèle, une seule feuille
-            de style, et une mise en page qui s'adapte au téléphone.
+            Portfolio développé en HTML et CSS, sans framework ni template, avec une mise
+            en page responsive adaptée aux supports mobiles.
           </p>
           <p>
-            Hébergé sur GitHub Pages, avec un nom de domaine acheté chez Infomaniak et relié par la configuration DNS.
+            Hébergement via GitHub Pages, avec domaine personnalisé configuré via DNS chez Infomaniak.
           </p>
           <p><a href="https://github.com/William-Bassole/Portfolio" target="_blank" rel="noopener">Voir le code sur GitHub</a></p>
         </div>
